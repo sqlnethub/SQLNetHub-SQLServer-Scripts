@@ -1,11 +1,10 @@
 /*
-* This T-SQL script creates a database backup encryption certificate.
-* This certificate can be used for creating encrypted database backup files.
-*
-* This script is part of a technical article on SQLNetHub. 
-* For more info please visit: https://www.sqlnethub.com/2017/08/encrypting-a-sql-server-backup-set/
+-- This T-SQL script creates a database backup encryption certificate.
+-- This certificate can be used for creating encrypted database backup files.
+--
+-- This script is part of a technical article on SQLNetHub. 
+-- For more info please visit: https://www.sqlnethub.com/2017/08/encrypting-a-sql-server-backup-set/
 */
-
 --Create Database Master Key and Encrypt it with a Strong Password
 USE master;
 GO
@@ -29,6 +28,6 @@ GO
 --Export the Backup Certificate to a File
 BACKUP CERTIFICATE DBBackupEncryptCert1 TO FILE = 'c:\tmp\DBBackupEncryptCert1.cert'
 WITH PRIVATE KEY (
-FILE = 'c:\tmp\TestDB1CertKey',
+FILE = 'c:\tmp\DBBackupCertKey',
 ENCRYPTION BY PASSWORD = 'PASSWORD_GOES_HERE');
 GO
