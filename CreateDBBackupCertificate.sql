@@ -31,3 +31,5 @@ WITH PRIVATE KEY (
 FILE = 'c:\tmp\DBBackupCertKey',
 ENCRYPTION BY PASSWORD = 'PASSWORD_GOES_HERE');
 GO
+
+--Next Step: Follow the blog post on SQLNetHub to see how you can backup a database using the certificate created above: https://www.sqlnethub.com/2017/08/encrypting-a-sql-server-backup-set/ 
